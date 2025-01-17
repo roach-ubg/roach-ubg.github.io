@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UBGLoader</title>
+</head>
+
+<body bgcolor="black">
+  <font color="white">
+    <!-- Dropdown menu -->
+    <label for="iframe-selector">Choose a page:</label>
+    <select id="iframe-selector">
+      <option value="https://bocaplanet.com/Iframe/service/uv/hvtrs8%2F-wuw%2Cgmoelg.aoo%2Fqecrah%3Dq%3Ftje'22pkzxa'22efivimn'5A">the pizza edition</option>
+      <option value="https://bocaplanet.com/Iframe/service/uv/hvtrs8%2F-wuw%2Cgmoelg.aoo%2Fqecrah%3Dq%3Fcpaxy'22gcmgs">crazy games</option>
+      <option value="https://bocaplanet.com/Iframe/service/uv/hvtr%3A-%2Fktah%2Cim%2F">itch.io</option>
+             <option value="https://bocaplanet.com/Iframe/service/uv/hvtr%3A-%2Flou.eg-">now.gg</option>
+             <option value="https://bocaplanet.com/Iframe/service/uv/hvtrs8%2F-wuw%2Cgmoelg.aoo%2Fqecrah%3Dq%3Fcmonmctjgcmgs">coolmathgames</option>
+             <option value="https://bocaplanet.com/Iframe/service/uv/hvtrs8%2F-wuw%2Cgmoelg.aoo%2Fqecrah%3Dq%3Fggfmrae'22nmw">geForce now</option>
+
+
+
+    </select>
+    <button id="load-button">Load</button>
+  </font>
+  
+  <!-- Iframe to load the selected page -->
+  <iframe id="iframe" src="" style="width: 100%; height: 500px; border: none;"></iframe>
+
+  <script>
+    // Get references to the dropdown, iframe, and button
+    const iframeSelector = document.getElementById('iframe-selector');
+    const iframe = document.getElementById('iframe');
+    const loadButton = document.getElementById('load-button');
+
+    // Add event listener for the "Load" button
+    loadButton.addEventListener('click', function() {
+      // Get the selected option value (URL) from the dropdown
+      const selectedURL = iframeSelector.value;
+
+      // Update the iframe's src based on the selected option's value
+      iframe.src = selectedURL;
+
+      // Optional: Display an alert and console log
+      console.log('User clicked load');
+      alert('Loading...');
+    });
+  </script>
+
+</body>
+   
+</html>
